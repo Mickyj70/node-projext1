@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //routes
+app.use("/register", require("./routes/register"));
 app.use("/employees", require("./routes/api/employees"));
 
 app.get("/", (req, res) => {
